@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './Hotbar.css';
+import "./App.css";
+import Sky from './sky';
+import Chooseplanet from './chooseplanet';
+import Home from './home';
+import { useState, useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { Html, Points, PointMaterial, Sphere, PointerLockControls } from '@react-three/drei'
+import * as random from 'maath/random/dist/maath-random.esm'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div>
+        <Routes>
+          {/* Define routes and the corresponding components */}
+          <Route path="/" element={<Home />} />
+          <Route path="/chooseplanet" element={<Chooseplanet />} />
+          <Route path="/sky" element={<Sky />} />
+        </Routes>
+      </div>
+    </Router>
+  )
 }
-
-export default App;

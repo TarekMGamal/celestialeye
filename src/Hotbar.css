@@ -1,0 +1,47 @@
+/* Container for the hotbar */
+.hotbar-container {
+    position: fixed;                /* Fixes the position relative to the viewport */
+    bottom: 50px;                  /* Distance from the bottom of the screen */
+    left: 50%;                     /* Center horizontally */
+    transform: translateX(-50%);   /* Adjust to perfectly center */
+    display: flex;                 /* Use flexbox for layout */
+    gap: 10px;                     /* Space between the buttons */
+    padding: 2px;                 /* Padding inside the container */
+    background-color: transparent; /* Semi-transparent dark background */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Floating shadow effect */
+    border: 2px solid #555;        /* Border styling */
+    border-radius: 40px; 
+    box-shadow: 0px 0px 8px rgba(0, 255, 255, 0.4); /* Initial glow effect */
+
+  }
+  
+  /* Style for each button */
+  .hotbar-button {
+    width: 150px;                   /* Width of the button */
+    height: 40px;                  /* Height of the button */
+    background-color: transparent;        /* Background color */
+    border-radius: 12px;           /* Rounded corners for buttons */
+    outline: none;                 /* No outline on focus */
+    cursor: pointer;               /* Pointer cursor on hover */
+    display: flex;                 /* Flexbox for centering icon */
+    justify-content: center;       /* Center the icon horizontally */
+    align-items: center;           /* Center the icon vertically */
+    transition: all 0.3s ease;     /* Smooth transitions */
+    border: none;
+  }
+  
+  /* Button hover effect */
+  .hotbar-button:hover,
+  .hotbar-button:focus {
+    background-color: #666;        /* Darker background on hover */
+    border-color: #00ffff;         /* Change border color */
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 1); /* Brighter glow on hover */
+  }
+  
+  /* Icon inside the button */
+  .hotbar-icon {
+    width: 30px;                   /* Set icon width */
+    height: 30px;                  /* Set icon height */
+    object-fit: contain;           /* Ensure the image fits properly */
+  }
+  

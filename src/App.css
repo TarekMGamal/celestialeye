@@ -1,38 +1,181 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+html,
+body,
+#root, canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  /*background: #12071f;*/
+  background-color: black;
+}
 .App {
-  text-align: center;
+  background-image: url('./Appbackground.png'); /* Reference your background image */
+  background-size: cover; /* Make the image cover the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  min-height: 100vh; /* Ensure the background covers the full viewport height */
+  width: 100%; /* Make sure it takes the full width */
+  color: white; /* Set the text color to ensure it contrasts well */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Dash Horizon';
+  src: url('./DashHorizon.otf') format('truetype'); /* Update with your font file path */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body, .App, .navbar, .planet-name, .explore-details-buttons button {
+  font-family: 'Dash Horizon', sans-serif; /* Apply font to these elements */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  background-color: transparent; /* No background color */
+  padding: 20px;
+  height: 60px; /* Increased height of navbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread children across navbar */
+}
+
+.search-container {
+  position: relative; /* Keep the search container relative */
+  flex-grow: 1; /* Allow the search bar to grow */
+  margin: 0 20px; /* Add some margin */
+}
+
+.search-input {
+  border-radius: 15px;
+  border: 1px solid #FFF; /* Add border for visibility */
+  padding: 5px;
+  background-color: transparent; /* Slightly transparent */
+  color: white;
+  width: 35%; /* Make search input take full width of container */
+}
+
+.explore-details-buttons {
+  display: flex; /* Align buttons in a row */
+  gap: 15px; /* Space between buttons */
+  margin-left: 10px; /* Adjust left margin to move buttons slightly left */
+}
+
+.planet-display {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column; /* Align children in a column */
+  align-items: center; /* Center main planet */
+}
+
+.button-container {
+  margin-top: 10px; /* Add space above buttons */
+}
+
+.explore-button,
+.details-button {
+  margin: 0 90px; /* Add space between buttons */
+}
+
+.explore-details-buttons button {
+  background: none; /* No background color */
+  border: none; /* Remove border */
+  color: white; /* Set text color to white */
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  cursor: pointer; /* Show a pointer cursor on hover */
+}
+
+.explore-details-buttons button:hover {
+  color: #ccc; /* Optional: Change the color when hovering */
+}
+
+.slider-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0; /* Remove padding */
+}
+
+.slider-button img {
+  width: 100px; /* Set desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+.slider-container {
+  display: flex;
+  align-items: center; /* Center the main planet vertically */
+  justify-content: center; /* Center the main planet horizontally */
+  margin-top: 50px; /* Add space above the slider */
+}
+
+.main-planet-container {
+  width: 280px; /* Adjust size for the main planet */
+  height: 280px; /* Keep it a square for 3D sphere effect */
+  margin: 0 600px; /* Add margin for slider buttons */
+}
+
+.thumbnail-container {
+  margin-top: 10px; /* Space between main planet and thumbnail */
+  display: flex;
+  flex-direction: column; /* Align children in a column */
+  align-items: center; /* Center the thumbnail and name */
+}
+
+.thumbnail-planet-container {
+  width: 130px; /* Increased width to fit larger thumbnail */
+  height: 130px; /* Increased height to fit larger thumbnail */
+  display: flex;
+  justify-content: center; /* Center the thumbnail */
+  align-items: center; /* Center vertically */
+}
+
+.thumbnail-box {
+  border: 0.2px solid white; /* Border around each thumbnail box */
+  margin: 20px; /* Space between thumbnails */
+  padding: 10px; /* Padding inside the box */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* Center content */
+  max-width: 200px; /* Ensure the box does not exceed this width */
+  border-radius: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.thumbnails-container {
+  display: flex; /* Display thumbnails in a row */
+  flex-wrap: wrap; /* Allow thumbnails to wrap to the next line */
+  justify-content: center; /* Center the thumbnails */
+  margin-top: 20px; /* Add some space above the thumbnail section */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.thumbnail-buttons {
+  margin-top: 5px; /* Space above the buttons */
+}
+
+.thumbnail-buttons button {
+  background: transparent; /* No background color */
+  color: white; /* Set text color to white */
+  margin: 2px; /* Space between buttons */
+  padding: 5px 10px; /* Padding for buttons */
+  cursor: pointer; /* Show a pointer cursor on hover */
+  text-decoration-line: underline;
+}
+
+.thumbnail-buttons button:hover {
+  color: #ccc; /* Optional: Change the color when hovering */
+}
+
+.planet-name {
+  margin-top: 5px; /* Space between thumbnail and name */
+  font-size: 25px; /* Adjust the font size if needed */
 }

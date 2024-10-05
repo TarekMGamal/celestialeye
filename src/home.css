@@ -1,0 +1,57 @@
+.App {
+    background-image: url('./Appbackground.png'); /* Reference your background image */
+    background-size: cover; /* Make the image cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh; /* Ensure the background covers the full viewport height */
+    width: 100%; /* Make sure it takes the full width */
+    color: white; /* Set the text color to ensure it contrasts well */
+    position: relative; /* For absolute positioning of child elements */
+    overflow: hidden; /* Hide any overflow from the rotating planet */
+  }
+  @font-face {
+    font-family: 'Dash Horizon';
+    src: url('./DashHorizon.otf') format('truetype'); /* Update with your font file path */
+  }
+  
+  body, .App, .navbar, .planet-name, .explore-details-buttons button {
+    font-family: 'Dash Horizon', sans-serif; /* Apply font to these elements */
+  }
+  .header-text {
+    text-align: center; /* Center the text */
+    margin-top: 50px; /* Add some space at the top */
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+  
+  .go-button {
+    position: absolute; /* Position button on the planet */
+    bottom: 73%; /* Adjust position to be on the planet */
+    border: 2px solid white; /* Add border for visibility */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 1.2rem; /* Font size for button */
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text */
+    text-decoration: underline; /* Underline text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px;
+    text-decoration: none;
+  }
+
+  .vr-button {
+    position: absolute; /* Position button on the planet */
+    bottom: 80%; /* Adjust position to be on the planet */
+    border: 2px solid white; /* Add border for visibility */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 1.2rem; /* Font size for button */
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text */
+    text-decoration: underline; /* Underline text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 30px;
+    text-decoration: none;
+  }
+  
